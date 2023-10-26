@@ -1,0 +1,853 @@
+﻿##############################################################
+#############Hiraeth - Dynasty Legacy Overhaul################
+##############################################################
+
+###BLOOD LEGACIES
+
+glory_legacy_1 = { ### Desirable Match
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		intrigue = 1
+		learning = 1
+		ai_boldness = 10
+		##marriage bonus
+	}
+	effect = { 
+		custom_description_no_bullet = { ##Custom Effect
+			text = hth_blood_legacy_1_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_blood_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Requirement
+			text = hth_blood_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_blood_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_blood_legacy_2 = { ### Heredity
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		ai_boldness = 10
+		inbreeding_chance = -0.25
+		negative_inactive_inheritance_chance = 0.15
+		positive_inactive_inheritance_chance = 0.25
+	}
+	can_be_picked = { 
+		hth_blood_2_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_blood_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Requirement
+			text = hth_blood_legacy_2_req_effect
+		}
+	}
+}
+blood_legacy_4 = { # Architected Ancestry
+	legacy = blood_legacy_track
+	character_modifier = {
+		monthly_intrigue_lifestyle_xp_gain_mult = 0.25
+		monthly_learning_lifestyle_xp_gain_mult = 0.25
+		ai_boldness = 10
+	}
+	can_be_picked = { 
+		hth_blood_3_legacy_trigger = yes
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = blood_legacy_4_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_blood_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Requirement
+			text = hth_blood_legacy_3_req_effect
+		}
+	}
+	traits = {
+		beauty_good_1 = 100
+		intellect_good_1 = 100
+		physique_good_1 = 100
+		fecund = 50
+		albino = 50
+		giant = 10
+		dwarf = 1
+		scaly = 1
+	}
+}
+hth_blood_legacy_4 = { ### Convergent Blood
+	legacy = blood_legacy_track
+	
+	character_modifier = {
+		ai_boldness = 10
+		inbreeding_chance = -0.25
+		positive_random_genetic_chance = 0.25
+		negative_random_genetic_chance = 0.15
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_blood_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Requirement
+			text = hth_blood_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_blood_4_legacy_trigger = yes
+	}
+}
+hth_blood_legacy_5 = { ### Lineage of the Dynasty
+	legacy = blood_legacy_track
+
+	character_modifier = {
+		intrigue = 1
+		learning = 1
+		genetic_trait_strengthen_chance = 1.0
+		ai_boldness = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_blood_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Requirement
+			text = hth_blood_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_blood_5_legacy_trigger = yes
+	}
+}
+###WARFARE LEGACIES
+hth_warfare_legacy_1 = { ### Dreams of Conquest
+	legacy = warfare_legacy_track
+	
+	character_modifier = {
+		martial = 2
+		levy_size = 0.10
+		ai_war_chance = 0.10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_warfare_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_warfare_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_warfare_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_warfare_legacy_2 = { ### Call of the Sheep
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		ai_war_chance = 0.10
+		vassal_levy_contribution_mult = 0.25
+		men_at_arms_cap = 1
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_warfare_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_warfare_legacy_2_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_warfare_2_legacy_trigger = yes
+	}
+}
+hth_warfare_legacy_3 = { ### Novelty of War
+	legacy = warfare_legacy_track
+	
+	character_modifier = {
+		monthly_martial_lifestyle_xp_gain_mult = 0.5
+		ai_war_chance = 0.10
+	}
+	can_be_picked = { 
+		hth_warfare_3_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_warfare_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Decision
+			text = hth_warfare_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_warfare_legacy_3_req_effect
+		}
+	}
+}
+hth_warfare_legacy_4 = { ### Death Lullaby
+	legacy = warfare_legacy_track
+	
+	character_modifier = {
+		ai_war_chance = 0.10
+		attacker_advantage = 15
+		counter_efficiency = 0.30
+		movement_speed = 0.10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_warfare_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_warfare_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_warfare_4_legacy_trigger = yes
+	}
+}
+hth_warfare_legacy_5 = { ### Bannerlord
+	legacy = warfare_legacy_track
+
+	character_modifier = {
+		ai_war_chance = 0.10
+		#army_maintenance_mult = -0.50
+		min_combat_roll = 10
+		martial = 2
+		no_prowess_loss_from_age = yes
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_warfare_legacy_1_ai_effect
+		}
+		#custom_description_no_bullet = { ##Artifact Unlock Info
+		#	text = hth_warfare_legacy_5_artifact_effect
+		#}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_warfare_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_warfare_5_legacy_trigger = yes
+	}
+}
+###LAW LEGACIES
+hth_law_legacy_1 = { ### By Right
+	legacy = law_legacy_track
+	
+	character_modifier = {
+		stewardship = 2
+		#monthly_income_mult = 0.10
+		powerful_vassal_opinion = 10
+		ai_greed = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info
+			text = hth_law_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_law_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_law_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_law_legacy_2 = { ### Privileges of the Great House
+	legacy = law_legacy_track
+	
+	character_modifier = {
+		ai_greed = 10
+		mercenary_hire_cost_mult = -0.3
+		title_creation_cost_mult = -0.3
+		monthly_court_grandeur_change_mult = 1
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info
+			text = hth_law_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_law_legacy_2_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_law_2_legacy_trigger = yes
+	}
+}
+hth_law_legacy_3 = { ### Wealth of the Dynasty
+	legacy = law_legacy_track
+	
+	character_modifier = {
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.5
+		ai_greed = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_law_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Mint Coins for Glory
+			text = hth_law_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_law_legacy_3_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_law_3_legacy_trigger = yes
+	}
+}
+hth_law_legacy_4 = { ### Medley of Decree
+	legacy = law_legacy_track
+
+	character_modifier = {
+		ai_greed = 10
+		
+		vassal_limit = 10
+		monthly_tyranny = -0.85
+		#monthly_income = 1
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info
+			text = hth_law_legacy_4_effect
+		}
+		custom_description_no_bullet = { ##AI Info
+			text = hth_law_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_law_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_law_4_legacy_trigger = yes
+	}
+}
+hth_law_legacy_5 = { ### True Ruler
+	legacy = law_legacy_track
+
+	character_modifier = {
+		ai_greed = 10
+		stewardship = 2
+		direct_vassal_opinion = 15
+	}
+	effect = { ##AI Info
+		custom_description_no_bullet = {
+			text = hth_law_legacy_1_ai_effect
+		}
+		#custom_description_no_bullet = { ##Artifact Unlock Info
+		#	text = hth_law_legacy_5_artifact_effect
+		#}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_law_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_law_5_legacy_trigger = yes
+	}
+}
+###GUILE LEGACIES
+hth_guile_legacy_1 = { ### House of Rats
+	legacy = guile_legacy_track
+	
+	character_modifier = {
+		intrigue = 2
+		owned_scheme_secrecy_add = 10
+		ai_vengefulness = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_guile_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_guile_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_guile_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_guile_legacy_2 = { ### Robber Baron
+	legacy = guile_legacy_track
+	
+	character_modifier = {
+		owned_hostile_scheme_success_chance_add = 25
+		monthly_county_control_change_add = 0.3
+		ai_vengefulness = 10
+	}
+	effect = { 
+		custom_description_no_bullet = {
+			text = hth_unlock_ruffians_unlock_desc
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_guile_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_guile_legacy_2_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_guile_2_legacy_trigger = yes
+	}
+}
+hth_guile_legacy_3 = { ### Shadows and Conspiracies
+	legacy = guile_legacy_track
+	
+	character_modifier = {
+		monthly_intrigue_lifestyle_xp_gain_mult = 0.5
+		ai_vengefulness = 10
+	}
+	effect = {
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_guile_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Visit Shady Merchant
+			text = hth_guile_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_guile_legacy_3_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_guile_3_legacy_trigger = yes
+	}
+}
+hth_guile_legacy_4 = { ### The Fox Changes his Fur
+	legacy = guile_legacy_track
+	
+	character_modifier = {
+		ai_vengefulness = 10
+		hostile_scheme_resistance_mult = 0.25
+		general_opinion = 5
+		attraction_opinion = 20
+	}
+	effect = {
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_guile_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_guile_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_guile_4_legacy_trigger = yes
+	}
+}
+hth_guile_legacy_5 = { ### Not his Habits
+	legacy = guile_legacy_track
+	character_modifier = {
+		ai_vengefulness = 10
+		max_hostile_schemes_add = 1
+		intrigue = 2
+	}
+	effect = {
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_guile_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_guile_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_guile_5_legacy_trigger = yes
+	}
+}
+###ERUDITION LEGACIES
+hth_erudition_legacy_1 = { ### Tribe of Wisdom
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+		learning = 2
+		ai_rationality = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##Custom Effect Tooltip
+			text = hth_erudition_legacy_1_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_erudition_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_erudition_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_erudition_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_erudition_legacy_2 = { ### Learned in Many Ways
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+		ai_rationality = 10
+		#ignore_negative_culture_opinion = yes
+		cultural_head_fascination_mult = 0.3
+		diplomatic_range_mult = 1.0
+		holding_build_gold_cost = -0.25
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_erudition_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_erudition_legacy_2_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_erudition_2_legacy_trigger = yes
+	}
+}
+hth_erudition_legacy_3 = { ### Treasured Knowledge
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.5
+		ai_rationality = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_erudition_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Consult the Archives
+			text = hth_erudition_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_erudition_legacy_3_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_erudition_3_legacy_trigger = yes
+	}
+}
+hth_erudition_legacy_4 = { ### Ordained by a Higher Power
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+		ai_rationality = 10
+		monthly_piety = 3
+		cultural_head_fascination_mult = 0.3
+		build_gold_cost = -0.25
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_erudition_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_erudition_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_erudition_4_legacy_trigger = yes
+	}
+}
+hth_erudition_legacy_5 = { ### Knights of the Mind
+	legacy = erudition_legacy_track
+	
+	character_modifier = {
+		ai_rationality = 10
+		learning = 2
+		development_growth_factor = 0.50
+	}
+	
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_erudition_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_erudition_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_erudition_5_legacy_trigger = yes
+	}
+}
+###GLORY LEGACIES
+hth_glory_legacy_1 = { ### Sport of Kings
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		diplomacy = 2
+		##feast and hunt cost
+		ai_sociability = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##Custom Effect Tooltip
+			text = hth_glory_legacy_1_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_glory_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_glory_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_glory_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_glory_legacy_2 = { ### Whispers of the Court
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		ai_sociability = 10
+		scheme_discovery_chance_mult = 0.10
+		personal_scheme_power_mult = 0.25
+		dread_decay_mult = -5.00
+	}
+	can_be_picked = { 
+		hth_glory_2_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_glory_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_glory_legacy_2_req_effect
+		}
+	}
+}
+hth_glory_legacy_3 = { ### Known Progeny
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		ai_sociability = 10
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.5
+	}
+	can_be_picked = { 
+		hth_glory_3_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_glory_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Introduce Heir to Realm
+			text = hth_glory_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_glory_legacy_3_req_effect
+		}
+	}
+}
+hth_glory_legacy_4 = { ### Regal Distinction
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		ai_sociability = 10
+		max_personal_schemes_add = 1
+		prestige_level_impact_mult = 2.0
+		court_grandeur_baseline_add = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_glory_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_glory_legacy_4_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_glory_4_legacy_trigger = yes
+	}
+}
+hth_glory_legacy_5 = { ### Legacy of the Dynasty
+	legacy = glory_legacy_track
+
+	character_modifier = {
+		monthly_prestige = 3
+		ai_sociability = 10
+		diplomacy = 2
+	}
+	
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_glory_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_glory_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_glory_5_legacy_trigger = yes
+	}
+}
+###KINDRED LEGACIES
+hth_kin_legacy_1 = { ### Familia Ante Omnia
+	legacy = kin_legacy_track
+	
+	character_modifier = {
+		martial = 1
+		diplomacy = 1
+		close_relative_opinion = 15
+		ai_honor = 10
+	}
+	doctrine_character_modifier = {
+		name = hth_kin_legacy_1_name
+		doctrine = doctrine_consanguinity_unrestricted
+		fertility = 0.1
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_kin_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_kin_legacy_1_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_kindred_1_legacy_trigger = yes
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+hth_kin_legacy_2 = { ### Household Guard
+	legacy = kin_legacy_track
+	
+	character_modifier = {
+		ai_honor = 10
+		active_accolades = 1
+		knight_limit = 3
+		#knight_effectiveness_mult = 1.0
+		prowess = 6
+	}
+	can_be_picked = { 
+		hth_kindred_2_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = {
+			text = warfare_legacy_5_unlock_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_kin_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_kin_legacy_2_req_effect
+		}
+	}
+}
+hth_kin_legacy_3 = { ### The Oldwalls
+	legacy = kin_legacy_track
+	
+	character_modifier = {
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.25
+		monthly_martial_lifestyle_xp_gain_mult = 0.25
+		ai_honor = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_kin_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Name Ancestral Seat
+			text = hth_kin_legacy_3_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_kin_legacy_3_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_kindred_3_legacy_trigger = yes
+	}
+}
+hth_kin_legacy_4 = { ### Until the Day we Die 
+	legacy = kin_legacy_track
+	
+	character_modifier = {
+		ai_honor = 10
+		dynasty_opinion = 15
+		short_reign_duration_mult = -0.5
+		controlled_province_advantage = 25
+	}
+	can_be_picked = { 
+		hth_kindred_4_legacy_trigger = yes
+	}
+	effect = { 
+		custom_description_no_bullet = {
+			text = kin_accolade_effect
+		}
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_kin_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_kin_legacy_4_req_effect
+		}
+	}
+}
+hth_kin_legacy_5 = { ### No Place Like Home
+	legacy = kin_legacy_track
+	character_modifier = {
+		martial = 1
+		diplomacy = 1
+		domain_limit = 3
+		ai_honor = 10
+	}
+	effect = { 
+		custom_description_no_bullet = { ##AI Info Text
+			text = hth_kin_legacy_1_ai_effect
+		}
+		custom_description_no_bullet = { ##Legacy Requirement Info
+			text = hth_kin_legacy_5_req_effect
+		}
+	}
+	can_be_picked = { 
+		hth_kindred_5_legacy_trigger = yes
+	}
+}
