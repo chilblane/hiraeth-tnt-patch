@@ -1,0 +1,1110 @@
+##Blood Legacy Requirements
+hth_blood_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed # Allowed to cheat
+		}
+		OR = { 
+			is_ai = yes
+			prestige_level > 2
+		}
+	}
+	trigger_else = {
+		prestige_level > 2
+	}
+}
+hth_blood_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			num_of_good_genetic_traits >= 1
+			num_of_bad_genetic_traits >= 1 
+		}
+	}
+	trigger_else = {
+		OR = {
+			num_of_good_genetic_traits >= 1
+			num_of_bad_genetic_traits >= 1 
+		}
+	}
+}
+hth_blood_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			intrigue_lifestyle_perks > 17
+			learning_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			intrigue_lifestyle_perks > 17
+			learning_lifestyle_perks > 17
+		}
+	}
+}
+hth_blood_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = { 
+					count >= 6
+					OR = {
+						num_of_good_genetic_traits >= 1
+						num_of_bad_genetic_traits >= 1
+					}
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = { 
+				count >= 6
+				OR = {
+					num_of_good_genetic_traits >= 1
+					num_of_bad_genetic_traits >= 1
+				}
+			}
+		}
+	}
+}
+hth_blood_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Warfare Legacy Requirements
+hth_warfare_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			has_trait = education_martial_5
+			has_trait = education_martial_4
+			has_trait = education_martial_3
+		}
+	}
+	trigger_else = {
+		OR = {
+			has_trait = education_martial_5
+			has_trait = education_martial_4
+			has_trait = education_martial_3
+		}
+	}
+}
+hth_warfare_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_vassal = {
+				count >= 3
+				has_dread_level_towards = {
+					target = root
+					level >= 1
+				}
+			}
+		}
+	}
+	trigger_else = {
+		any_vassal = {
+			count >= 3
+			has_dread_level_towards = {
+				target = root
+				level >= 1
+			}
+		}
+	}
+}
+hth_warfare_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			martial_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		martial_lifestyle_perks > 17
+	}
+}
+hth_warfare_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = { 
+					count >= 6
+					number_of_commander_traits >= 1
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = { 
+				count >= 6
+				number_of_commander_traits >= 1
+			}
+		}
+	}
+}
+hth_warfare_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Law Legacy Requirements
+hth_law_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			is_independent_ruler = yes
+			is_powerful_vassal = yes
+		}
+	}
+	trigger_else = {
+		OR = {
+			is_independent_ruler = yes
+			is_powerful_vassal = yes
+		}
+	}
+}
+hth_law_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			gold >= 1000
+		}
+	}
+	trigger_else = {
+		gold >= 1000
+	}
+}
+hth_law_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			stewardship_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		stewardship_lifestyle_perks > 17
+	}
+}
+hth_law_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			gold >= 10000
+		}
+	}
+	trigger_else = {
+		gold >= 10000
+	}
+}
+hth_law_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Guile Legacy Requirements
+hth_guile_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			OR = {
+				has_trait = murderer
+				any_secret = {
+					secret_owner = root
+					secret_type = secret_murder
+				}
+			}
+		}
+	}
+	trigger_else = {
+		OR = {
+			has_trait = murderer
+			any_secret = {
+				secret_owner = root
+				secret_type = secret_murder
+			}
+		}
+	}
+}
+hth_guile_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_hooked_character = { 
+				root = { has_strong_hook = prev }
+				OR = {
+					highest_held_title_tier = 3
+					highest_held_title_tier = 4
+				}
+			}
+		}
+	}
+	trigger_else = {
+		any_hooked_character = { 
+			root = { has_strong_hook = prev }
+			OR = {
+				highest_held_title_tier = 3
+				highest_held_title_tier = 4
+			}
+		}
+	}
+}
+hth_guile_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			intrigue_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		intrigue_lifestyle_perks > 17
+	}
+}
+hth_guile_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			num_of_relation_rival >= 3
+		}
+	}
+	trigger_else = {
+		num_of_relation_rival >= 3
+	}
+}
+hth_guile_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Erudition Legacy Requirements
+hth_erudition_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			OR = {
+				has_trait = pilgrim
+				has_trait = hajjaj
+			}
+		}
+	}
+	trigger_else = {
+		OR = {
+			has_trait = pilgrim
+			has_trait = hajjaj
+		}
+	}
+}
+hth_erudition_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			learning > 24
+		}
+	}
+	trigger_else = {
+		learning > 24
+	}
+}
+hth_erudition_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			learning_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		learning_lifestyle_perks > 17
+	}
+}
+hth_erudition_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			number_of_lifestyle_traits > 3
+		}
+	}
+	trigger_else = {
+		number_of_lifestyle_traits > 3
+	}
+}
+hth_erudition_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Glory Legacy Requirements
+hth_glory_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			num_of_relation_friend >= 3
+		}
+	}
+	trigger_else = {
+		num_of_relation_friend >= 3
+	}
+}
+hth_glory_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_known_secret = {
+				is_known_by = root
+				count >= 10	
+			}
+		}
+	}
+	trigger_else = {
+		any_known_secret = {
+			is_known_by = root
+			count >= 10	
+		}
+	}
+}
+hth_glory_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		diplomacy_lifestyle_perks > 17
+	}
+}
+hth_glory_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = { 
+					count >= 3
+					highest_held_title_tier = 4
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = { 
+				count >= 3
+				highest_held_title_tier = 4
+			}
+		}
+	}
+}
+hth_glory_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Kindred Legacy Requirements
+hth_kindred_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			AND = {
+				is_married = yes
+				any_child = {
+					count >= 8
+				}
+			}
+		}
+	}
+	trigger_else = {
+		is_married = yes
+		any_child = {
+			count >= 8
+		}
+	}
+}
+hth_kindred_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_knight = {
+				prowess >= 20
+			}
+		}
+	}
+	trigger_else = {
+		any_knight = {
+			prowess >= 20
+		}
+	}
+}
+hth_kindred_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			martial_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			martial_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+}
+hth_kindred_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			capital_county = {
+				development_level >= 55
+			}
+		}
+	}
+	trigger_else = {
+		capital_county = {
+			development_level >= 55
+		}
+	}
+}
+hth_kindred_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Adventure Legacy Requirements
+hth_adventure_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_county = {
+				county = {
+					holder = root
+					OR = {
+						has_county_modifier = fp1_stele_ancestors_strong
+						has_county_modifier = fp1_stele_ancestors_weak
+						has_county_modifier = fp1_stele_conquest_strong
+						has_county_modifier = fp1_stele_conquest_weak
+						has_county_modifier = fp1_stele_promotion_strong
+						has_county_modifier = fp1_stele_promotion_weak
+					}
+				}
+			}
+		}
+	}
+	trigger_else = {
+		culture = { has_innovation = innovation_longboats }
+		any_county = {
+			county = {
+				holder = root
+				OR = {
+					has_county_modifier = fp1_stele_ancestors_strong
+					has_county_modifier = fp1_stele_ancestors_weak
+					has_county_modifier = fp1_stele_conquest_strong
+					has_county_modifier = fp1_stele_conquest_weak
+					has_county_modifier = fp1_stele_promotion_strong
+					has_county_modifier = fp1_stele_promotion_weak
+				}
+			}
+		}
+	}
+}
+hth_adventure_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_vassal = {
+				count >= 6
+				NOT = { has_culture = root.culture }
+			}
+		}
+	}
+	trigger_else = {
+		any_vassal = {
+			count >= 6
+			NOT = { has_culture = root.culture }
+		}
+	}
+}
+hth_adventure_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			stewardship_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			stewardship_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+}
+hth_adventure_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_vassal = {
+				count >= 4
+				is_powerful_vassal = yes
+				NOT = { has_faith = root.faith }
+			}
+		}
+	}
+	trigger_else = {
+		any_vassal = {
+			count >= 4
+			is_powerful_vassal = yes
+			NOT = { has_faith = root.faith }
+		}
+	}
+}
+hth_adventure_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+## Pillage Legacy Requirements
+hth_pillage_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			has_trait = viking
+		}
+	}
+	trigger_else = {
+		has_trait = viking
+		culture = { has_innovation = innovation_longboats }
+	}
+}
+hth_pillage_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_prisoner = {
+				count >= 8
+				NOT = { has_faith = root.faith }
+			}
+		}
+	}
+	trigger_else = {
+		any_prisoner = {
+			count >= 8
+			NOT = { has_faith = root.faith }
+		}
+	}
+}
+hth_pillage_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			martial_lifestyle_perks > 17 
+		}
+	}
+	trigger_else = {
+		martial_lifestyle_perks > 17 
+	}
+}
+hth_pillage_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = {
+					count >= 4
+					has_trait = shieldmaiden
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = {
+				count >= 4
+				has_trait = shieldmaiden
+			}
+		}
+	}
+}
+hth_pillage_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+# 1.5 Society Legacy Requirements
+hth_society_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			employs_court_position = seneschal_court_position
+		}
+	}
+	trigger_else = {
+		employs_court_position = seneschal_court_position
+	}
+}
+hth_society_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			num_of_known_languages >= 4
+		}
+	}
+	trigger_else = {
+		num_of_known_languages >= 4
+	}
+}
+hth_society_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			learning_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			learning_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+}
+hth_society_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			AND = { 
+				has_royal_court = yes
+				court_grandeur_current > 64
+			}
+		}
+	}
+	trigger_else = {
+		has_royal_court = yes
+		court_grandeur_current > 64
+	}
+}
+hth_society_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+# Metropolitan and Coterie 
+hth_metropolitan_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			has_trait = architect
+			has_trait = scholar
+		}
+	}
+	trigger_else = {
+		OR = {
+			has_trait = architect
+			has_trait = scholar
+		}
+	}
+}
+hth_metropolitan_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			any_vassal = {
+				count >= 1
+				is_powerful_vassal = yes
+				has_government = republic_government
+			}
+		}
+	}
+	trigger_else = {
+		any_vassal = {
+			count >= 1
+			is_powerful_vassal = yes
+			has_government = republic_government
+		}
+	}
+}
+hth_metropolitan_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			stewardship_lifestyle_perks > 17
+			learning_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			learning_lifestyle_perks > 17
+			stewardship_lifestyle_perks > 17
+		}
+	}
+}
+hth_metropolitan_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = { 
+					count >= 1
+					has_trait = education_republican_knowledge_4
+					is_player_heir_of = root
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = { 
+				count >= 1
+				has_trait = education_republican_knowledge_4
+				is_player_heir_of = root
+			}
+		}
+	}
+}
+hth_metropolitan_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+hth_coterie_1_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			house = {
+				any_house_member = { 
+					count >= 12
+				}
+			}
+		}
+	}
+	trigger_else = {
+		house = {
+			any_house_member = { 
+				count >= 12
+			}
+		}
+	}
+}
+hth_coterie_2_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			house = {
+				any_house_member = { 
+					count >= 3
+					is_councillor_of = root
+					has_dread_level_towards = {
+						target = root
+						level >= 1
+					}
+				}
+			}
+		}
+	}
+	trigger_else = {
+		house = {
+			any_house_member = { 
+				count >= 3
+				is_councillor_of = root
+				has_dread_level_towards = {
+					target = root
+					level >= 1
+				}
+			}
+		}
+	}
+}
+hth_coterie_3_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			intrigue_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+	trigger_else = {
+		OR = {
+			intrigue_lifestyle_perks > 17
+			diplomacy_lifestyle_perks > 17
+		}
+	}
+}
+hth_coterie_4_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			dynasty = {
+				any_dynasty_member = { 
+					count >= 6
+					highest_held_title_tier = 3
+				}
+			}
+		}
+	}
+	trigger_else = {
+		dynasty = {
+			any_dynasty_member = { 
+				count >= 6
+				highest_held_title_tier = 3
+			}
+		}
+	}
+}
+hth_coterie_5_legacy_trigger = {
+	trigger_if = {
+		limit = {
+			has_game_rule = hth_ai_allowed
+		}
+		OR = {
+			is_ai = yes
+			prestige_level = 5
+		}
+	}
+	trigger_else = {
+		prestige_level = 5
+	}
+}
+# Love you

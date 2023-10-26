@@ -366,7 +366,7 @@
  HTH_UNLOCK_DECISION_NAME_COTERIE:0 "\n#P Unlocks Interaction:#! [share_secrets|E]\n#help This unlocks a new interaction that is unique to characters with this dynasty legacy.#!"
  #
  ##Requirements
- HTH_REQUIREMENT_PREQ_NAME_WARFARE_1:0 "\n#S Legacy Requirements:#! Have the [GetTrait('education_martial_4').GetName( GetNullCharacter )] or [GetTrait('education_martial_3').GetName( GetNullCharacter )] [education_trait|e]\n#help This is a condition that has to be met before this dynasty legacy can be attained.#!"
+ HTH_REQUIREMENT_PREQ_NAME_WARFARE_1:0 "\n#S Legacy Requirements:#! Have the [GetTrait('education_martial_5').GetName( GetNullCharacter )], [GetTrait('education_martial_4').GetName( GetNullCharacter )], or [GetTrait('education_martial_3').GetName( GetNullCharacter )] [education_trait|e]\n#help This is a condition that has to be met before this dynasty legacy can be attained.#!"
  HTH_REQUIREMENT_PREQ_NAME_WARFARE_2:0 "\n#S Legacy Requirements:#! Have at least (3) [vassals|e] that are [intimidated|e] or [cowed|e]\n#help This is a condition that has to be met before this dynasty legacy can be attained.#!"
  HTH_REQUIREMENT_PREQ_NAME_WARFARE_3:0 "\n#S Legacy Requirements:#! Have at least (18) Lifestyle [perks|e] in the [martial_lifestyle|e]\n#help This is a condition that has to be met before this dynasty legacy can be attained.#!"
  HTH_REQUIREMENT_PREQ_NAME_WARFARE_4:0 "\n#S Legacy Requirements:#! Have at least (6) separate [dynasty|e] members with at least (1) [commander_trait|e]\n#help This is a condition that has to be met before this dynasty legacy can be attained.#!"
