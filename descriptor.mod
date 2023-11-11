@@ -6,5 +6,5 @@ tags={
 	"Gameplay"
 }
 name="Hiraeth T&T Patch"
-supported_version="1.10.2"
+supported_version="1.11.*"
 remote_file_id="3051117770"
