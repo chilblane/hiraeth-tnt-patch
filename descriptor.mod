@@ -5,6 +5,6 @@ tags={
 	"Character Interactions"
 	"Gameplay"
 }
-name="Hiraeth T&T Patch"
+name="Hiraeth - Dynasty Legacies Overhaul 1.11 Patch"
 supported_version="1.11.*"
 remote_file_id="3051117770"
